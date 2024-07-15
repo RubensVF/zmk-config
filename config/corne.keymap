@@ -27,8 +27,8 @@
             //                    | ALT | LWR | SPC |   | BKSP | RSE  | ENT |
             bindings = <
                 &kp ESC    &kp Q   &kp W     &kp E    &kp R        &kp T    &kp Y    &kp U    &kp I     &kp O   &kp P     &kp LBRC
-                &kp LSHFT  &kp A   &kp S     &kp D    &kp F        &kp G    &kp H    &kp J    &kp K     &kp L   &kp SEMI  &kp NO
-                &kp LCTRL  &kp Z   &kp X     &kp C    &kp V        &kp B    &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH  &kp NO
+                &kp LSHFT  &kp A   &kp S     &kp D    &kp F        &kp G    &kp H    &kp J    &kp K     &kp L   &kp SEMI  &kp PGUP
+                &kp LCTRL  &kp Z   &kp X     &kp C    &kp V        &kp B    &kp N    &kp M    &kp COMMA &kp DOT &kp FSLH  &kp PGDN
                                    &kp LALT  &mo 1    &kp SPACE    &kp BSPC &mo 2    &kp RET  
             >;
         };
@@ -45,9 +45,9 @@
             // |      |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   |BKSP |     | ENT |
             bindings = <
-                &kp NO  &kp N1 &kp N2   &kp N3   &kp N4  &kp N5   &kp N6   &kp N7   &kp N8  &kp N9     &kp N0  &kp MINUS
-                &bt TAB &kp NO &kp NO   &kp NO   &kp NO  &kp NO   &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &kp NO  &kp NO 
-                &kp NO  &kp NO &kp NO   &kp NO   &kp NO  &kp NO   &kp NO   &kp NO   &kp NO  &kp NO     &kp NO  &kp NO 
+                &trans  &kp N1 &kp N2   &kp N3   &kp N4  &kp N5   &kp N6   &kp N7   &kp N8  &kp N9     &kp N0  &kp MINUS
+                &bt TAB &trans &trans   &trans   &trans  &trans   &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &trans  &trans 
+                &trans  &trans &trans   &trans   &trans  &trans   &trans   &trans   &trans  &trans     &trans  &trans 
                                         &kp LGUI &trans  &trans   &trans   &trans   &trans 
             >;
         };
@@ -65,8 +65,8 @@
             //                    | ALT   |         | SPC     |   | BKSP      |         | ENT  |
             bindings = <
                 &kp GRAVE &kp EXCL &kp AT   &kp HASH     &kp DLLR      &kp PRCNT             &kp CARET       &kp AMPS          &kp ASTRK   &kp LPAR     &kp RPAR &kp LC(LA(BSLH))
-                &kp NO    &kp NO   &kp NUBS &kp LS(NUBS) &kp LC(LA(Q)) &kp LC(LA(RBKT))      &kp RBKT        &kp SL(RBKT)      &kp DQT     &kp BSLH     &kp PLUS &kp SL(MINUS)
-                &kp NO    &kp NO   &kp NO   &kp NO       &kp NO        &kp NO                &kp LC(LA(DQT)) &kp LC(LA(MINUS)) &kp LS(DQT) &kp LS(BSLH) &kp EXCL &kp SL(PLUS)
+                &trans    &trans   &kp NUBS &kp LS(NUBS) &kp LC(LA(Q)) &kp LC(LA(RBKT))      &kp RBKT        &kp SL(RBKT)      &kp DQT     &kp BSLH     &kp PLUS &kp SL(MINUS)
+                &trans    &trans   &trans   &trans       &trans        &trans                &kp LC(LA(DQT)) &kp LC(LA(MINUS)) &kp LS(DQT) &kp LS(BSLH) &kp EXCL &kp SL(PLUS)
                                             &kp LALT     &trans        &trans                &trans          &trans            &trans
             >;
         };
