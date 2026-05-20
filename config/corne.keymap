@@ -62,6 +62,16 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+
+conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -117,10 +127,20 @@
             // |          |         |     |       | !       |  S(+)   |   | RA(")     | RA(-)   | S(") | S(\) |     |          |
             //                        | ALT   |         | SPC     |   | BKSP      |         | ENT  |
             bindings = <
-                &kp GRAVE       &kp EXCL        &kp AT     &kp HASH      &kp DLLR      &kp PRCNT             &kp CARET       &kp AMPS          &kp ASTRK   &kp LPAR     &kp RPAR         &kp LC(LA(BSLH))
+                &kp GRAVE       &kp EXCL        &kp AT     &kp HASH      &kp DLLR      &kp PRCNT             &kp CARET       &kp AMPS          &kp ASTRK   &kp LPAR     &kp RPAR         &kp RA(BSLH)
                 &kp LC(LA(TAB)) &kp RA(Q)       &kp NUBS   &kp LS(NUBS)  &kp EQUAL     &kp LS(MINUS)         &kp RBKT        &kp LS(RBKT)      &kp SQT     &kp BSLH     &kp RA(RBKT)     &trans
                 &trans          &trans          &trans     &trans        &kp EXCL      &kp LS(EQUAL)         &kp RA(SQT)    &kp RA(MINUS)     &kp LS(SQT) &kp LS(BSLH) &trans           &trans
                                                 &kp LALT   &trans        &trans        &trans                &trans            &trans
+            >;
+        };
+
+
+        function_layer {
+            bindings = <
+                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+                &kp DEL  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans   &trans
+                &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans   &trans
+                                &trans  &trans  &trans              &trans  &trans  &trans
             >;
         };
     };
